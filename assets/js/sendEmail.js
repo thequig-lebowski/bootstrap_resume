@@ -1,5 +1,5 @@
 function sendMail(contactForm) {
-    
+
     var templateParams = {
         'from_name': contactForm.name.value,
         'from_email': contactForm.emailaddress.value,
@@ -14,6 +14,7 @@ function sendMail(contactForm) {
             function (error) {
                 console.log('Failed', error);
             });
+    this.reset();
     return false;
 }
 
